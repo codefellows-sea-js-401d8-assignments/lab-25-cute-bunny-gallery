@@ -5,7 +5,7 @@
 
 
   <section class="text-section full-width-container" ng-if="cinemagraphGalleryCtrl.showList && !cinemagraphGalleryCtrl.showFullsize">
-    <ul class="list-group col-md-6 col-md-offset-3">
+    <ul class="list-group col-md-6 col-md-offset-3 row row-centered full-width-container">
       <cinemagraph-gallery-text ng-repeat="item in cinemagraphGalleryCtrl.gallery" title="{{item.title}}" year="{{item.year}}" quote="{{item.quote}}" data-id="{{item.id}}">
     </ul>
   </section>
