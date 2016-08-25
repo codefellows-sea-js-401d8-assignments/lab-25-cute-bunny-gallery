@@ -1,0 +1,32 @@
+<section>
+  <select class="form-control" ng-init="cinemagraphGalleryCtrl.albums[0]" ng-options="item as item.label for item in cinemagraphGalleryCtrl.albums" ng-model="album" ng-change="cinemagraphGalleryCtrl.chooseAlbum(album)"></select>
+
+  <section class="text-section" ng-if="appMainCtrl.showList">
+    <h2>List</h2>
+    <ul class="list-group col-md-6 col-md-offset-3">
+      <cinemagraph-gallery-text ng-repeat="item in cinemagraphGalleryCtrl.gallery" title="{{item.title}}" year="{{item.year}}" imdb="{{item.imdb}}" quote="{{item.quote}}" data-id="{{item.id}}">
+    </ul>
+  </section>
+
+  <section class="thumbnail-section" ng-if="appMainCtrl.showThumbnails">
+    <h2>Thumbs</h2>
+    <div class="row row-centered">
+      <cinemagraph-gallery-thumbnail ng-repeat="item in cinemagraphGalleryCtrl.gallery" title="{{item.title}}" image="{{item.image}}" data-id="{{item.id}}">
+    </div>
+  </section>
+
+  <section class="fullsize-section">
+    <h2>Fullsize</h2>
+    <div class="row row-centered">
+      <!-- <cinemagraph-gallery-fullsize ng-repeat="item in cinemagraphGalleryCtrl.gallery" title="{{item.title}}" year="{{item.year}}" imdb="{{item.imdb}}" quote="{{item.quote}}" image="{{item.image}}"> -->
+
+      <cinemagraph-gallery-fullsize
+      title="{{cinemagraphGalleryCtrl.fullsizeImage.title}}" year="{{cinemagraphGalleryCtrl.fullsizeImage.year}}"
+      imdb="{{cinemagraphGalleryCtrl.fullsizeImage.imdb}}"
+      quote="{{cinemagraphGalleryCtrl.fullsizeImage.quote}}"
+      image="{{cinemagraphGalleryCtrl.fullsizeImage.image}}">
+      </cinemagraph-gallery-fullsize>
+    </div>
+  </section>
+
+</section>

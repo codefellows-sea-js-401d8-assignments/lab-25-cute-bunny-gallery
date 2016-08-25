@@ -1,0 +1,20 @@
+.fullsize-section {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.fullsize-image-container {
+  width: 540px;
+  margin: 0 auto;
+  margin-bottom: 2em;
+  text-align: right;
+  display: block;
+
+  img {
+    width: 540px;
+    height: auto;
+  }
+  .details {
+    margin-top: 10px;
+  }
+}
