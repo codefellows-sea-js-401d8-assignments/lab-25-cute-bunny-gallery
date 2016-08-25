@@ -2,4 +2,5 @@
 
 module.exports = function(app) {
   require('./lance-gallery')(app);
+  require('./paul-gallery')(app);
 };

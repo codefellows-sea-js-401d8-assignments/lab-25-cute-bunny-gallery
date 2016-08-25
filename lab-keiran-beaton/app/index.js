@@ -16,12 +16,17 @@ galleryApp.config(['$routeProvider', function($route) {
     controller: 'ImageController1',
     controllerAs: 'ic1'
   })
+  .when('/paul', {
+    template: require('./html/paul.html'),
+    controller: 'ImageController2',
+    controllerAs: 'ic2'
+  })
   .when('/full/:id', {
     template: require('./html/full.html'),
     controller: 'FullController',
     controllerAs: 'fc'
   })
   .otherwise({
-    redirectTo: '/lance'
+    redirectTo: '/paul'
   });
 }]);
