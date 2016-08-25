@@ -12,9 +12,6 @@ module.exports = function(app) {
         title: '@',
         url: '@',
         description: '@'
-      },
-      link: function($scope, $elem, $attr, $controller) {
-        $scope.lic.
       }
     };
   });
