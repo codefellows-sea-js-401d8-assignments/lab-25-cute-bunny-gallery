@@ -1,24 +1,26 @@
 <section>
-  <button type="button" class="btn" ng-click="cinemagraphGalleryCtrl.toggleDisplayMode()">{{cinemagraphGalleryCtrl.buttonText}}</button>
+  <button class="btn" ng-click="cinemagraphGalleryCtrl.toggleDisplayMode()"
+  ng-show="!cinemagraphGalleryCtrl.showFullsize">{{cinemagraphGalleryCtrl.buttonText}}</button>
 
-  <select class="form-control" ng-init="cinemagraphGalleryCtrl.albums[0]" ng-options="item as item.label for item in cinemagraphGalleryCtrl.albums" ng-model="album" ng-change="cinemagraphGalleryCtrl.chooseAlbum(album)"></select>
+  <select class="form-control" ng-init="album=cinemagraphGalleryCtrl.albums[0]" ng-options="item as item.label for item in cinemagraphGalleryCtrl.albums" ng-model="album" ng-change="cinemagraphGalleryCtrl.chooseAlbum(album)"
+  ng-show="!cinemagraphGalleryCtrl.showFullsize"></select>
 
-  <section class="text-section" ng-if="cinemagraphGalleryCtrl.showList">
-    <h2>List</h2>
+
+  <section class="text-section" ng-if="cinemagraphGalleryCtrl.showList && !cinemagraphGalleryCtrl.showFullsize">
     <ul class="list-group col-md-6 col-md-offset-3">
-      <cinemagraph-gallery-text ng-repeat="item in cinemagraphGalleryCtrl.gallery" title="{{item.title}}" year="{{item.year}}" imdb="{{item.imdb}}" quote="{{item.quote}}" data-id="{{item.id}}">
+      <cinemagraph-gallery-text ng-repeat="item in cinemagraphGalleryCtrl.gallery" title="{{item.title}}" year="{{item.year}}" quote="{{item.quote}}" data-id="{{item.id}}">
     </ul>
   </section>
 
-  <section class="thumbnail-section" ng-if="cinemagraphGalleryCtrl.showThumbnails">
-    <h2>Thumbs</h2>
+
+  <section class="thumbnail-section" ng-if="cinemagraphGalleryCtrl.showThumbnails && !cinemagraphGalleryCtrl.showFullsize">
     <div class="row row-centered">
       <cinemagraph-gallery-thumbnail ng-repeat="item in cinemagraphGalleryCtrl.gallery" title="{{item.title}}" image="{{item.image}}" data-id="{{item.id}}">
     </div>
   </section>
 
-  <section class="fullsize-section">
-    <h2>Fullsize</h2>
+
+  <section class="fullsize-section" ng-if="cinemagraphGalleryCtrl.showFullsize">
     <div class="row row-centered">
       <!-- <cinemagraph-gallery-fullsize ng-repeat="item in cinemagraphGalleryCtrl.gallery" title="{{item.title}}" year="{{item.year}}" imdb="{{item.imdb}}" quote="{{item.quote}}" image="{{item.image}}"> -->
 
@@ -28,6 +30,7 @@
       quote="{{cinemagraphGalleryCtrl.fullsizeImage.quote}}"
       image="{{cinemagraphGalleryCtrl.fullsizeImage.image}}">
       </cinemagraph-gallery-fullsize>
+      <button class="hide-fullsize-button" ng-click="cinemagraphGalleryCtrl.hideFullsizeImage()">x</button>
     </div>
   </section>
 

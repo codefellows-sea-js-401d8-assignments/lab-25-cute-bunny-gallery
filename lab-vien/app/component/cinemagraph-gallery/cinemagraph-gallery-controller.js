@@ -15,6 +15,7 @@ function CinemagraphGalleryController() {
 
   this.showList = true;
   this.showThumbnails = false;
+  this.showFullsize = false;
   this.buttonText = 'show thumbnails';
 
   this.toggleDisplayMode = function() {
@@ -33,6 +34,11 @@ function CinemagraphGalleryController() {
 
   this.changeFullsizeImage = (index) => {
     this.fullsizeImage = this.gallery[index];
+    this.showFullsize = true;
+  };
+
+  this.hideFullsizeImage = () => {
+    this.showFullsize = false;
   };
 
   this.chooseAlbum = (album) => {

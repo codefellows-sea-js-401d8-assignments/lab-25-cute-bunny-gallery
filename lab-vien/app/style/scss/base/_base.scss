@@ -41,21 +41,33 @@ hr {
 .col-centered {
     display:inline-block;
     float:none;
-    /* reset the text-align */
     text-align:left;
 }
 
 section {
+  width: 100%;
   display: inline-block;
 }
 
 .text-section {
   width: 100%;
-  
+
   a:hover {
     color: black;
   }
   ul {
     color: black;
   }
+}
+
+.text-section {
+  margin-top: 5em;
+}
+
+.thumbnail-section {
+  margin-top: 5em;
+}
+
+.clickable-row {
+  cursor: pointer;
 }

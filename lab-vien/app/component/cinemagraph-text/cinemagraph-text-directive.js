@@ -14,7 +14,6 @@ module.exports = function(app) {
         id: '@',
         title: '@',
         year: '@',
-        imdb: '@',
         quote: '@'
       },
       link: function($scope, $elem, $attribute, $controller) { // controller is taken from the require above
