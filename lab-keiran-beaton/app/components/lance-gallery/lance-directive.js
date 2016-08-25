@@ -11,7 +11,8 @@ module.exports = function(app) {
       scope: {
         title: '=',
         imageGallery: '=',
-        description: '='
+        description: '=',
+        thumbnail: '='
       }
     };
   });

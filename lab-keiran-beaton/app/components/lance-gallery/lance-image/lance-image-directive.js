@@ -9,9 +9,11 @@ module.exports = function(app) {
       bindToController: true,
       require: '^kbLanceGallery',
       scope: {
-        title: '@',
-        url: '@',
-        description: '@'
+        title: '=',
+        url: '=',
+        description: '=',
+        id: '=',
+        thumbnail: '='
       }
     };
   });
