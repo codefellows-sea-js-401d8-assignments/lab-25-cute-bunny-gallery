@@ -25,5 +25,3 @@ app.config(['$routeProvider', function($route) {
       redirectTo: '/'
     });
 }]);
-
-// angular components
