@@ -1,0 +1,12 @@
+<div class="list-group col-md-6  col-md-offset-3">
+  <ul>
+    <li ng-repeat="img in hd.images">
+      <a href="#/fullsize/{{img.id}}" class="list-group-item">
+        <i class="fa fa-picture-o"></i>
+        <strong>{{img.title}}</strong> <br />
+      Description: {{img.description}} <br />
+      </a>
+      <a href="{{img.url}}" class="list-group-item"><i class="fa fa-link"></i> Image Source</a>
+    </li>
+  </ul>
+</div>
