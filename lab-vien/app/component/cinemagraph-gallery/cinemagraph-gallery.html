@@ -1,8 +1,6 @@
 <section>
-  <button class="btn" ng-click="cinemagraphGalleryCtrl.toggleDisplayMode()"
-  ng-show="!cinemagraphGalleryCtrl.showFullsize">{{cinemagraphGalleryCtrl.buttonText}}</button>
 
-  <select class="form-control" ng-init="album=cinemagraphGalleryCtrl.albums[0]" ng-options="item as item.label for item in cinemagraphGalleryCtrl.albums" ng-model="album" ng-change="cinemagraphGalleryCtrl.chooseAlbum(album)"
+  <select class="gallery-select form-control" ng-init="album=cinemagraphGalleryCtrl.albums[0]" ng-options="item as item.label for item in cinemagraphGalleryCtrl.albums" ng-model="album" ng-change="cinemagraphGalleryCtrl.chooseAlbum(album)"
   ng-show="!cinemagraphGalleryCtrl.showFullsize"></select>
 
 
@@ -33,5 +31,10 @@
       <button class="hide-fullsize-button" ng-click="cinemagraphGalleryCtrl.hideFullsizeImage()">x</button>
     </div>
   </section>
+
+  <div class="row row-centered">
+    <button class="toggle-display-mode-button" ng-click="cinemagraphGalleryCtrl.toggleDisplayMode()"
+    ng-show="!cinemagraphGalleryCtrl.showFullsize">{{cinemagraphGalleryCtrl.buttonText}}</button>
+  </div>
 
 </section>
