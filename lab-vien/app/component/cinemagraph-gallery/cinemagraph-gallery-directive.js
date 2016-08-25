@@ -10,7 +10,7 @@ module.exports = function(app) {
       controllerAs: 'cinemagraphGalleryCtrl',
       bindToController: true,
       require: '^appMain',
-      scope: true
+      scope: {}
     };
   });
 };

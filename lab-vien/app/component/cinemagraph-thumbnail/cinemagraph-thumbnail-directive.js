@@ -16,7 +16,7 @@ module.exports = function(app) {
         id: '@'
       },
       link: function($scope, $elem, $attribute, $controller) { // controller is taken from the require above
-        $scope.cinemagraphThumbnailCtrl.showFullsize = $controller.showFullsize;
+        $scope.cinemagraphThumbnailCtrl.changeFullsizeImage = $controller.changeFullsizeImage;
       }
     };
   });

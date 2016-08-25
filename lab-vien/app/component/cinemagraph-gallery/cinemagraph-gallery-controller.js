@@ -13,7 +13,25 @@ function CinemagraphGalleryController() {
   this.gallery = this.albums[0].cinemagraphs; // initial value
   this.fullsizeImage = this.gallery[0]; // initial value
 
-  this.showFullsize = (index) => {
+  this.showList = true;
+  this.showThumbnails = false;
+  this.buttonText = 'show thumbnails';
+
+  this.toggleDisplayMode = function() {
+    if (this.showList) {
+      this.showList = false;
+      this.showThumbnails = true;
+      this.buttonText = 'show list';
+
+    } else {
+      this.showList = true;
+      this.showThumbnails = false;
+      this.buttonText = 'show thumbnails';
+    }
+  };
+
+
+  this.changeFullsizeImage = (index) => {
     this.fullsizeImage = this.gallery[index];
   };
 
