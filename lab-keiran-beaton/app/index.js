@@ -11,6 +11,9 @@ require('./components')(galleryApp);
 
 galleryApp.config(['$routeProvider', function($route) {
   $route
+  .when('/home', {
+    template: require('./html/home.html')
+  })
   .when('/lance', {
     template: require('./html/lance.html'),
     controller: 'ImageController1',
@@ -32,6 +35,6 @@ galleryApp.config(['$routeProvider', function($route) {
     controllerAs: 'fc'
   })
   .otherwise({
-    redirectTo: '/paul'
+    redirectTo: '/home'
   });
 }]);
