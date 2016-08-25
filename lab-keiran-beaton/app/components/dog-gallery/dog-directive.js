@@ -1,13 +1,13 @@
 'use strict';
 
 module.exports = function(app) {
-  app.directive('kbLanceGallery', function() {
+  app.directive('kbDogGallery', function() {
     return {
       restrict: 'EAC',
-      controller: 'LanceController',
-      controllerAs: 'lc',
+      controller: 'DogController',
+      controllerAs: 'dc',
       bindToController: true,
-      template: require('./lance-directive.html'),
+      template: require('./dog-directive.html'),
       scope: {
         title: '=',
         imageGallery: '=',

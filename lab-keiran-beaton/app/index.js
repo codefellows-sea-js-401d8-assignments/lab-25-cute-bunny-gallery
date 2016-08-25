@@ -21,6 +21,11 @@ galleryApp.config(['$routeProvider', function($route) {
     controller: 'ImageController2',
     controllerAs: 'ic2'
   })
+  .when('/dog', {
+    template: require('./html/dog.html'),
+    controller: 'ImageController3',
+    controllerAs: 'ic3'
+  })
   .when('/full/:id', {
     template: require('./html/full.html'),
     controller: 'FullController',
