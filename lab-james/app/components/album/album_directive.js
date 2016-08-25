@@ -8,11 +8,7 @@ module.exports = function(app) {
       controllerAs: 'ac',
       bindToController: true,
       scope: {
-        id: '@',
-        title: '@',
-        description: '@',
-        url: '@',
-        images: '='
+        album: '='
       }
     };
   });

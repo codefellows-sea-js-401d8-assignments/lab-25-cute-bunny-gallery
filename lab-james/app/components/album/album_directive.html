@@ -1,14 +1,7 @@
-<!-- <div class="home-list-item">
-<a data-ng-repeat="image in ac.images" href="#/albums/{{image.id}}" class="thumbnail">
-  <img data-ng-src="{{image.url}}" height="100" width="100" />
+<div data-pix-villain-directive data-title="{{ac.album.title}}">
+  <strong> {{ac.album.title}} </strong>
   <br />
-  {{image.title}}
-</a>
-</div> -->
-
-<strong> {{ac.title}} </strong>
-<div class="home-item-container">
-  <a href="#/albums/{{ac.url}}" class="home-list-item">
-    {{ac.description}}
+  <a href="#/albums/{{ac.album.url}}" class="home-list-item">
+    {{ac.album.description}}
   </a>
 </div>
