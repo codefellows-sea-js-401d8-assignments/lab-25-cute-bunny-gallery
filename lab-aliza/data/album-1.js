@@ -23,6 +23,6 @@ module.exports = {
     id: 4,
     url: 'https://media.giphy.com/media/3o6Ztj4ulu0hLoqyic/giphy.gif',
     description: 'I want to run!',
-    title: 'Let out out'
+    title: 'Let me out'
   }
 ]};
