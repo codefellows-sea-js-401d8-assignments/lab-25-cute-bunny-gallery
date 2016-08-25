@@ -6,8 +6,8 @@ require('./scss/base.scss');
 const angular = require('angular');
 const galleryApp = angular.module('galleryApp', [require('angular-route')]);
 
-require('./controllers');
-require('./components');
+require('./controllers')(galleryApp);
+require('./components')(galleryApp);
 
 galleryApp.config(['$routeProvider', function($route) {
   $route

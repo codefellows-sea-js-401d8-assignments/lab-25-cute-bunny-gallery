@@ -1,12 +1,12 @@
 <div>
-  <div data-ng-if="lc.imageGallery.thumbnail=false" href='#/full/{{lic.image.id}}'>
+  <div data-ng-show="lc.imageGallery.thumbnail=false" href='#/full/{{lic.image.id}}'>
     <tr>
       <td>{{lc.imageGallery.image.title}}</td>
       <td>{{lic.image.url}}</td>
       <td>{{lic.image.description}}</td>
     </tr>
   </div>
-  <div data-ng-if="lc.imageGallery.thumbnail=true">
+  <div data-ng-show="lc.imageGallery.thumbnail=true">
     <img src="{{lic.image.url}}" height="100" width="100"/>
     <p>lic.image.url: {{lic.image.url}}</p>
     <p>lc.imageGallery.image.url: {{lc.imageGallery.image.url}}</p>
