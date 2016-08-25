@@ -9,13 +9,16 @@ const angular = require('angular');
 const angular_route = require('angular-route');
 
 // angular modules
-var app = angular.module('demoApp', [angular_route]);
+var app = angular.module('lab25', [angular_route]);
+
+require('./controller')(app);
+require('./components')(app);
 
 app.config(['$routeProvider', function($route) {
   $route
     .when('/', {
-      templateUrl: '/app/view/home/home.html',
-      controller: 'HomeController',
+      templateUrl: '/app/components/home/home.html',
+      controller: 'ImageController',
       controllerAs: 'hc'
     })
     .otherwise({
@@ -24,4 +27,3 @@ app.config(['$routeProvider', function($route) {
 }]);
 
 // angular components
-require('./view/home');

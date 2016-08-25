@@ -4,7 +4,7 @@
 
 describe('testing controllers used in routing', function() {
   beforeEach(() => {
-    angular.mock.module('demoApp');
+    angular.mock.module('lab25');
     angular.mock.inject(($controller) => {
       this.homeController = new $controller('HomeController');
     });
