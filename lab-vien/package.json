@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "watch": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot",
+    "lint": "./node_modules/eslint/bin/eslint.js .",
     "test": "karama start"
   },
   "keywords": [],
@@ -31,5 +32,6 @@
     "webpack-dev-server": "^1.14.1"
   },
   "devDependencies": {
+    "eslint": "^3.3.1"
   }
 }
