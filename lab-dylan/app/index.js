@@ -9,8 +9,8 @@ require('./components')(demoApp);
 demoApp.config(['$routeProvider', function($route) {
   $route.when('/home', {
     template: require('./html/home.html'),
-    controller: 'BunnyController',
-    controllerAs: 'bc'
+    controller: 'AlbumController',
+    controllerAs: 'ac'
   })
   .otherwise({
     redirectTo: '/home'
