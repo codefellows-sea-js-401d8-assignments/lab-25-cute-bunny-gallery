@@ -7,21 +7,21 @@ module.exports = function($routeProvider) {
       controller: 'ImageController',
       controllerAs: 'ic'
     })
-    .when('/albums', {
-      template: require('../html/albums.html'),
+    .when('/album/:album_id', {
+      template: require('../html/album.html'),
       controller: 'ImageController',
       controllerAs: 'ic'
     })
     // .when('/albums/:album_id', {
-    //   template: require('../html/villains.html'),
+    //   template: require('../html/image.html'),
     //   controller: 'ImageController',
     //   controllerAs: 'ic'
     // })
-    .when('/fullsize/:id', {
-      template: require('../html/fullsize.html'),
-      controller: 'ImageController',
-      controllerAs: 'ic'
-    })
+    // .when('/fullsize/:id', {
+    //   template: require('../html/fullsize.html'),
+    //   controller: 'ImageController',
+    //   controllerAs: 'ic'
+    // })
     .otherwise({
       redirectTo: '/'
     });

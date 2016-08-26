@@ -3,11 +3,12 @@
 module.exports = function(app) {
   app.directive('pixAlbumDirective', function() {
     return {
-      template: require('./album_directive.html'),
+      template: require('./album-template.html'),
       controller: 'AlbumController',
       controllerAs: 'ac',
       bindToController: true,
       scope: {
+        id: '@',
         album: '='
       }
     };

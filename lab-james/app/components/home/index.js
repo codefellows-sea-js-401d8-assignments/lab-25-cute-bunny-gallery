@@ -2,5 +2,5 @@
 
 module.exports = function(app) {
   require('./home_directive')(app);
-  require('./home_directive_ctrl')(app);
+  require('./home_controller')(app);
 };

@@ -3,15 +3,12 @@
 module.exports = function(app) {
   app.directive('pixHomeDirective', function() {
     return {
-      template: require('./home-directive.html'),
+      template: require('./home-template.html'),
       controller: 'HomeController',
       controllerAs: 'hc',
       bindToController: true,
       scope: {
-        id: '@',
-        title: '@',
-        description: '@',
-        url: '@'
+        album: '='
       }
     };
   });

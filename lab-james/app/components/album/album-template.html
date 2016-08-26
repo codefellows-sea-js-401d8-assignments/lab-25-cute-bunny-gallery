@@ -1,0 +1,8 @@
+<h2 class="page-title"> {{ac.album.title}} </h2>
+<div class="mugshot-content">
+  <a ng-repeat="image in ac.album.images" href="#/album/{{image.albumId}}/fullsize/{{image.id}}" class="thumbnail">
+    <img ng-src="{{image.url}}" height="100" width="100" />
+    <br />
+    {{image.title}}
+  </a>
+</div>
