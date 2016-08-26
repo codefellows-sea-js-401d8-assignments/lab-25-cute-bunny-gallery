@@ -12,16 +12,11 @@ module.exports = function($routeProvider) {
       controller: 'ImageController',
       controllerAs: 'ic'
     })
-    // .when('/albums/:album_id', {
-    //   template: require('../html/image.html'),
-    //   controller: 'ImageController',
-    //   controllerAs: 'ic'
-    // })
-    // .when('/fullsize/:id', {
-    //   template: require('../html/fullsize.html'),
-    //   controller: 'ImageController',
-    //   controllerAs: 'ic'
-    // })
+    .when('/album/:album_id/fullsize/:image_id', {
+      template: require('../html/album.html'),
+      controller: 'ImageController',
+      controllerAs: 'ic'
+    })
     .otherwise({
       redirectTo: '/'
     });

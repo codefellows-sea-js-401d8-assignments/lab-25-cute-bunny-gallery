@@ -2,11 +2,9 @@
 
 module.exports = function(app) {
   app.controller('AlbumController',['$routeParams', function($routeParams) {
-    let albumId = this.id;
-    let paramsId = $routeParams.album_id;
     console.log('Activated the AlbumController');
-    if (paramsId !== albumId) return false;
-    if(albumId === paramsId) this.album.showAlbum = true;
+    if (this.id !== $routeParams.album_id) return false;
+    if(this.id === $routeParams.album_id) this.album.showAlbum = true;
 
     this.showThumbnail = function() {
       this.album.viewThumbnail = true;
@@ -16,6 +14,12 @@ module.exports = function(app) {
     this.showList = function() {
       this.album.viewThumbnail = false;
       this.album.viewList = true;
+    };
+
+    this.showFullsize = function() {
+      this.album.viewThumbnail = false;
+      this.album.viewList = false;
+      this.album.images[$routeParams.image_id - 1].showFullsize = true;
     };
   }]);
 };
