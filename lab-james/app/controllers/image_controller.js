@@ -116,7 +116,7 @@ module.exports = function(app) {
           {
             id: 3,
             title: 'Wilbur',
-            description: 'Charlotte\'s web anyone? Maybe some bacon?',
+            description: 'Charlotte\'s Web anyone? Maybe some bacon?',
             url: 'https://pbs.twimg.com/profile_images/510510962571362306/mvKC5J3l.jpeg',
             showFullsize: false
           },
