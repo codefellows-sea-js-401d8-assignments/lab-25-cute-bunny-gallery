@@ -1,4 +1,5 @@
-<strong> {{hc.album.title}} </strong>
-<a href="#/album/{{hc.album.albumId}}" class="home-list-item">
-  {{hc.album.description}}
+<div ng-repeat="album in hc.albums">
+<a href="#/album/{{album.albumId}}" class="list-link">
+  <strong>{{album.title}}</strong>&nbsp;| {{album.description}}
 </a>
+</div>

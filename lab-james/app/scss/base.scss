@@ -91,7 +91,7 @@ nav a:hover {
   justify-content: space-around;
 }
 
-.content a, .mugshot-content a {
+.content a, .mugshot-content a, .list-link {
   color: $app-font-primary-color;
   text-decoration: none;
   transition: color 0.3s ease;
@@ -101,10 +101,11 @@ nav a:hover {
   color: $app-font-secondary-color;
 }
 
-.home-list-item {
+.list-link {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   height: 40px;
   width: 400px;
   margin-bottom: 20px;
@@ -112,15 +113,8 @@ nav a:hover {
   border-radius: 5px;
 }
 
-.home-list-item:hover {
+.list-link:hover {
   border: 1px solid $app-font-secondary-color;
-}
-
-.home-item-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
 }
 
 .mugshot-content {
@@ -159,11 +153,4 @@ nav a:hover {
 
 .fullsize-content img:hover {
   box-shadow: 4px 4px rgba(255, 132, 13, 0.5);
-}
-
-.mugshot-title {
-  margin-bottom: 0px;
-  font-size: 25px;
-  font-weight: bold;
-  color: $app-font-primary-color;
 }

@@ -6,7 +6,7 @@ module.exports = function(app) {
       {
         albumId: 1,
         title: 'Pixar Villains',
-        description: 'An album showcasing the people who should\'ve been cast in Suicide Squad.',
+        description: 'The people who should\'ve been in Suicide Squad.',
         showAlbum: false,
         images: [
           {
@@ -46,7 +46,7 @@ module.exports = function(app) {
       {
         albumId: 2,
         title: 'Pixar Heroes',
-        description: 'When trouble comes your way, who you gonna call to save the day?',
+        description: 'Probably don\'t think they\'re heroes.',
         showAlbum: false,
         images: [
           {

@@ -8,7 +8,7 @@ module.exports = function(app) {
       controllerAs: 'hc',
       bindToController: true,
       scope: {
-        album: '='
+        albums: '='
       }
     };
   });
