@@ -10,6 +10,7 @@ module.exports = function(app) {
         showAlbum: false,
         viewThumbnail: false,
         viewList: true,
+        fullsize: false,
         images: [
           {
             id: 1,
@@ -52,6 +53,7 @@ module.exports = function(app) {
         showAlbum: false,
         viewThumbnail: false,
         viewList: true,
+        fullsize: false,
         images: [
           {
             id: 1,

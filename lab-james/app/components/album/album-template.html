@@ -2,11 +2,15 @@
   <img data-ng-src="{{image.url}}" height="300" width="300" />
   <p class="fullsize-title"><strong>{{image.title}}</strong></p>
   <p> {{image.description}} </p>
+  <br />
+  <button name="back" class="album-button" ng-show="ac.album.fullsize" ng-click="ac.goBack(image.id)">
+    <i class="fa fa-back"></i> BACK
+  </button>
 </div>
 
 <div class="thumbnail-content" ng-show="ac.album.viewThumbnail">
   <h2 class="page-title"> {{ac.album.title}} </h2>
-  <a ng-repeat="image in ac.album.images" href="#/album/{{image.albumId}}/fullsize/{{image.id}}" class="thumbnail" ng-click="ac.showFullsize()">
+  <a ng-repeat="image in ac.album.images" ng-click="ac.showFullsize(image.id)" href="" class="thumbnail">
     <img ng-src="{{image.url}}" height="100" width="100" />
     <br />
     {{image.title}}
@@ -15,12 +19,13 @@
 
 <div class="list-content" ng-show="ac.album.viewList">
   <h2 class="page-title"> {{ac.album.title}} </h2>
-  <a ng-repeat="image in ac.album.images" href="#/album/{{image.albumId}}/fullsize/{{image.id}}" class="list-link"  ng-click="ac.showFullsize()">
+  <a ng-repeat="image in ac.album.images" ng-click="ac.showFullsize(image.id)" href="" class="list-link">
     <strong>{{image.title}}</strong>&nbsp;| {{image.description}}
   </a>
 </div>
 
-<nav class="album-nav">
+
+<nav class="album-nav" ng-show="ac.album.viewList || ac.album.viewThumbnail">
   <ul>
     <li>
       <button name="thumb" type="button" class="album-button" ng-click="ac.showThumbnail()">
