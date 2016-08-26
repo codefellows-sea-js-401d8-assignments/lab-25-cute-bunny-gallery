@@ -3,7 +3,6 @@
 module.exports = function(app) {
   app.controller('AlbumController',['$routeParams', function($routeParams) {
     let previousView;
-    console.log('Activated the AlbumController');
     if (this.id !== $routeParams.album_id) return false;
     if(this.id === $routeParams.album_id) this.album.showAlbum = true;
 

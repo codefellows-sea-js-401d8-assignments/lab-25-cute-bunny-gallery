@@ -88,6 +88,46 @@ module.exports = function(app) {
             showFullsize: false
           }
         ]
+      },
+
+      {
+        albumId: 3,
+        title: 'Tears Be Gone',
+        description: 'Virtual tissues for those real tears.',
+        showAlbum: false,
+        viewThumbnail: false,
+        viewList: true,
+        fullsize: false,
+        images: [
+          {
+            id: 1,
+            title: 'Corgi',
+            description: 'If everyone owned one we\'d have world peace.',
+            url: 'https://pbs.twimg.com/profile_images/378800000674268962/06ce58cab26c3a0daf80cf57e5acb29b_400x400.jpeg',
+            showFullsize: false
+          },
+          {
+            id: 2,
+            title: 'Mighty Duck',
+            description: 'Quack (x100000). You know the chant.',
+            url: 'https://pbs.twimg.com/profile_images/606895434859094016/5GSYt-bm.jpg',
+            showFullsize: false
+          },
+          {
+            id: 3,
+            title: 'Wilbur',
+            description: 'Charlotte\'s web anyone? Maybe some bacon?',
+            url: 'https://pbs.twimg.com/profile_images/510510962571362306/mvKC5J3l.jpeg',
+            showFullsize: false
+          },
+          {
+            id: 4,
+            title: 'Unknown',
+            description: 'Don\'t know what this is, but LOL.',
+            url: 'https://pbs.twimg.com/profile_images/489190886190755840/6Q8Xf_HJ_400x400.jpeg',
+            showFullsize: false
+          }
+        ]
       }
     ];
   });

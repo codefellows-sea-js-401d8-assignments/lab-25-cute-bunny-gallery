@@ -20,7 +20,7 @@
 <div class="list-content" ng-show="ac.album.viewList">
   <h2 class="page-title"> {{ac.album.title}} </h2>
   <a ng-repeat="image in ac.album.images" ng-click="ac.showFullsize(image.id)" href="" class="list-link">
-    <strong>{{image.title}}</strong>&nbsp;| {{image.description}}
+    <strong>{{image.title}}</strong>&nbsp;: {{image.description}}
   </a>
 </div>
 
