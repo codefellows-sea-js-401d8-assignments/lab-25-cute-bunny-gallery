@@ -1,8 +1,30 @@
-<h2 class="page-title"> {{ac.album.title}} </h2>
-<div class="mugshot-content">
-  <a ng-repeat="image in ac.album.images" href="#/album/{{image.albumId}}/fullsize/{{image.id}}" class="thumbnail">
-    <img ng-src="{{image.url}}" height="100" width="100" />
-    <br />
-    {{image.title}}
-  </a>
+<div class="thumbnail-content" ng-show="ac.album.viewThumbnail">
+  <h2 class="page-title"> {{ac.album.title}} </h2>
+<a ng-repeat="image in ac.album.images" href="#/album/{{image.albumId}}/fullsize/{{image.id}}" class="thumbnail">
+  <img ng-src="{{image.url}}" height="100" width="100" />
+  <br />
+  {{image.title}}
+</a>
 </div>
+
+<div class="list-content" ng-show="ac.album.viewList">
+  <h2 class="page-title"> {{ac.album.title}} </h2>
+<a ng-repeat="image in ac.album.images" href="#/album/{{image.albumId}}/fullsize/{{image.id}}" class="list-link">
+  <strong>{{image.title}}</strong>&nbsp;| {{image.description}}
+</a>
+</div>
+
+<nav class="album-nav">
+  <ul>
+    <li>
+      <button name="thumb" type="button" class="album-button" ng-click="ac.showThumbnail()">
+        <i class="fa fa-home"></i> GRID VIEW
+      </button>
+    </li>
+    <li>
+      <button name="list" type="button" class="album-button" ng-click="ac.showList()">
+        <i class="fa fa-picture-o"></i> LIST VIEW
+      </button>
+    </li>
+  </ul>
+</nav>

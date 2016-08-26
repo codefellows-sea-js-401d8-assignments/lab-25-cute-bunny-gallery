@@ -8,6 +8,8 @@ module.exports = function(app) {
         title: 'Pixar Villains',
         description: 'The people who should\'ve been in Suicide Squad.',
         showAlbum: false,
+        viewThumbnail: false,
+        viewList: true,
         images: [
           {
             id: 1,
@@ -48,6 +50,8 @@ module.exports = function(app) {
         title: 'Pixar Heroes',
         description: 'Probably don\'t think they\'re heroes.',
         showAlbum: false,
+        viewThumbnail: false,
+        viewList: true,
         images: [
           {
             id: 1,
