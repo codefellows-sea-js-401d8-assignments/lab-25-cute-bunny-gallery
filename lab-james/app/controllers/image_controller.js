@@ -5,8 +5,8 @@ module.exports = function(app) {
     this.albums = [
       {
         albumId: 1,
-        title: 'Pixar Villains',
-        description: 'The people who should\'ve been in Suicide Squad.',
+        title: 'Villains',
+        description: 'Should\'ve been in Suicide Squad.',
         showAlbum: false,
         viewThumbnail: false,
         viewList: true,
@@ -47,7 +47,7 @@ module.exports = function(app) {
       },
       {
         albumId: 2,
-        title: 'Pixar Heroes',
+        title: 'Heroes',
         description: 'Probably don\'t think they\'re heroes.',
         showAlbum: false,
         viewThumbnail: false,
