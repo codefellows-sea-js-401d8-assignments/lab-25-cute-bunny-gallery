@@ -31,7 +31,6 @@ function CinemagraphGalleryController() {
     }
   };
 
-
   this.changeFullsizeImage = (index) => {
     this.fullsizeImage = this.gallery[index];
     this.showFullsize = true;
