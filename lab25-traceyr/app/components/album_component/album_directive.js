@@ -9,7 +9,7 @@ module.exports = function(app) {
       controllerAs: 'ad',
       bindToController: true,
       scope: {
-
+        title: '@'
       }
     };
   });

@@ -17,7 +17,7 @@ require('./components')(app);
 app.config(['$routeProvider', function($route) {
   $route
     .when('/', {
-      templateUrl: '/app/components/home/home.html',
+      template: require('./html/home.html'),
       controller: 'ImageController',
       controllerAs: 'hc'
     })
