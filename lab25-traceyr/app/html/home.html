@@ -1,7 +1,14 @@
 <div>
   <ul>
     <li ng-repeat="album in hc.albums">
-      <div album-directive title="{{album.title}}"></div>
+      <div album-directive title="{{album.title}}">
+        <ul>
+          <li ng-repeat"ablum in hc.albums">
+            <div thumbnail-directive images="images"></div>
+          </li>
+        </ul>
+      </div>
+
     </li>
   </ul>
 </div>
