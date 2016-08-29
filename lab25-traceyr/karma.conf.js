@@ -20,8 +20,8 @@ module.exports = function(config) {
       'node_modules/angular/angular.js',
       'node_modules/angular-route/angular-route.js',
       'app/entry.js',
-      'test/*-test.js',
-      'node_modules/angular-mocks/angular-mocks.js',
+      'test/*.js',
+      'node_modules/angular-mocks/angular-mocks.js'
     ],
 
     // list of files to exclude
@@ -33,7 +33,7 @@ module.exports = function(config) {
     webpack: webpackConfig,
     preprocessors: {
       'app/entry.js': ['webpack'],
-      'test/*-test.js': ['babel']
+      'test/*.js': ['babel']
     },
 
 

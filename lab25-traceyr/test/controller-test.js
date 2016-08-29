@@ -1,18 +1,23 @@
 'use strict';
 
 const angular = require('angular');
+const testApp = angular.model('testApp', []);
+require('../app/components/album_component')('testApp');
 
-describe('testing controllers used in routing', function() {
+describe('testing album component', function() {
+
   beforeEach(() => {
-    angular.mock.module('lab25');
-    angular.mock.inject(($controller) => {
-      this.homeController = new $controller('HomeController');
+    angular.mock.module('testApp');
+    angular.mock.inject(($compile, $rootScope) => {
+      this.compile = $compile;
+      this.scope = $rootScope.$new();
     });
   });
 
-  it('home controller should create a list of messages', () => {
-    expect(this.homeController.messages.length > 0).toEqual(true);
-    expect(this.homeController.messages.length).toEqual(3);
+  it('should load into the dom', () => {
+    let dd = this.compile(require('./controller-test.html'));
+    this.scope.$digest();
+    expect(dd.find('h2').text()).toBe('test');
   });
 
 });
