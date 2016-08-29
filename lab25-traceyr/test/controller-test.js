@@ -1,6 +1,6 @@
 'use strict';
-/*global angular angular:true*/
-/*eslint no-undef: "error"*/
+
+const angular = require('angular');
 
 describe('testing controllers used in routing', function() {
   beforeEach(() => {
