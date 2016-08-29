@@ -1,5 +1,10 @@
 <div ng-repeat="img in tnd.images" class="col-xs-2">
-  <a href="#/fullsize/{{img.id}}" class="thumbnail">
-    <img ng-src="{{tnd.url}}" width="100" />
+  <a href="#/fullsize/{{img[0].id}}/img.giphys[0].id" class="thumbnail">
+    <img ng-src="{{img.giphys[0].url}}" width="100" />
   </a>
+  <a href="#/fullsize/{{img[1].id}}/img.giphys[1].url" class="thumbnail">
+    <img ng-src="{{img.giphys[1].url}}" width="100" />
+  </a>
+    <a href="#/fullsize/{{img[2].id}}/img.giphys[2].url" class="thumbnail">
+  <img ng-src="{{img.giphys[2].url}}" width="100" />
 </div>

@@ -23,6 +23,8 @@ module.exports = function(app) {
     //   $location.path('/');
     // }
 
-    this.image = this.images[0].giphys[id - 1];
+    this.kitten = this.images[0].giphys[id - 1];
+    this.bunny = this.images[1].giphys[id - 1];
+    this.puppy = this.images[2].giphys[id - 1];
   }]);
 };

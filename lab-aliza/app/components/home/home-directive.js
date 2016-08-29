@@ -9,9 +9,7 @@ module.exports = function(app) {
       controllerAs: 'hd',
       bindToController: true,
       scope: {
-        title: '@',
-        description: '=',
-        url: '='
+        label: '@'
       }
     };
   });
