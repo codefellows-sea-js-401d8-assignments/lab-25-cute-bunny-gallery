@@ -1,0 +1,46 @@
+<section>
+
+  <select
+  class="gallery-select form-control"
+  ng-init="album=cinemagraphGalleryCtrl.albums[0]"
+  ng-options="item as item.label for item in cinemagraphGalleryCtrl.albums"
+  ng-model="album"
+  ng-change="cinemagraphGalleryCtrl.chooseAlbum(album)"
+  ng-show="!cinemagraphGalleryCtrl.showFullsize">
+  </select>
+
+
+  <section class="text-section full-width-container" ng-if="cinemagraphGalleryCtrl.showList && !cinemagraphGalleryCtrl.showFullsize">
+    <ul class="list-group col-md-6 col-md-offset-3 row row-centered full-width-container">
+      <cinemagraph-gallery-text ng-repeat="item in cinemagraphGalleryCtrl.gallery" title="{{item.title}}" year="{{item.year}}" quote="{{item.quote}}" data-id="{{item.id}}">
+    </ul>
+  </section>
+
+
+  <section class="thumbnail-section full-width-container" ng-if="cinemagraphGalleryCtrl.showThumbnails && !cinemagraphGalleryCtrl.showFullsize">
+    <div class="row row-centered full-width-container">
+      <cinemagraph-gallery-thumbnail ng-repeat="item in cinemagraphGalleryCtrl.gallery" title="{{item.title}}" image="{{item.image}}" data-id="{{item.id}}">
+    </div>
+  </section>
+
+
+  <section class="fullsize-section full-width-container" ng-if="cinemagraphGalleryCtrl.showFullsize">
+    <div class="row row-centered full-width-container">
+      <!-- <cinemagraph-gallery-fullsize ng-repeat="item in cinemagraphGalleryCtrl.gallery" title="{{item.title}}" year="{{item.year}}" imdb="{{item.imdb}}" quote="{{item.quote}}" image="{{item.image}}"> -->
+
+      <cinemagraph-gallery-fullsize
+      title="{{cinemagraphGalleryCtrl.fullsizeImage.title}}" year="{{cinemagraphGalleryCtrl.fullsizeImage.year}}"
+      imdb="{{cinemagraphGalleryCtrl.fullsizeImage.imdb}}"
+      quote="{{cinemagraphGalleryCtrl.fullsizeImage.quote}}"
+      image="{{cinemagraphGalleryCtrl.fullsizeImage.image}}">
+      </cinemagraph-gallery-fullsize>
+      <button class="hide-fullsize-button" ng-click="cinemagraphGalleryCtrl.hideFullsizeImage()">x</button>
+    </div>
+  </section>
+
+  <div class="row row-centered full-width-container">
+    <button class="toggle-display-mode-button" ng-click="cinemagraphGalleryCtrl.toggleDisplayMode()"
+    ng-show="!cinemagraphGalleryCtrl.showFullsize">{{cinemagraphGalleryCtrl.buttonText}}</button>
+  </div>
+
+</section>

@@ -1,0 +1,39 @@
+button {
+  margin: 0;
+  padding: 0;
+}
+
+.hide-fullsize-button {
+  border: none;
+  background: none;
+  color: $app-accent;
+}
+
+.hide-fullsize-button:hover {
+  color: $app-textColor;
+}
+
+.hide-fullsize-button:focus {
+  outline: none;
+}
+
+.toggle-display-mode-button {
+  margin: 1em;
+  border: none;
+  background: none;
+  color: $app-accent;
+}
+
+.toggle-display-mode-button:hover {
+  color: $app-textColor;
+}
+
+.toggle-display-mode-button:focus {
+  outline: none;
+}
+
+.button-container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
