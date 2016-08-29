@@ -1,7 +1,12 @@
 <div class="container">
   <div class="row">
     <div class="list-group col-md-6  col-md-offset-3">
-      <a href="#/" class="homeView" ablum="ablum">{{ad.title}}</a>
+      <a href="#/" class="homeView" album="ctrl.album">{{ctrl.title}}</a>
+      <ul>
+        <li ng-repeat="img in ctrl.album.images">
+          <div thumbnail-directive images="{{img}}">hello</div>
+        </li>
+      </ul>
     </div>
   </div>
 </div>

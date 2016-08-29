@@ -6,10 +6,11 @@ module.exports = function(app) {
       restrict: 'EAC',
       template: require('./album_directive.html'),
       controller: 'AlbumDirectiveController',
-      controllerAs: 'ad',
+      controllerAs: 'ctrl',
       bindToController: true,
       scope: {
-        title: '@'
+        title: '@',
+        album: '='
       }
     };
   });
