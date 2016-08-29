@@ -42,6 +42,8 @@ describe('Cinemagraph gallery with sub-components', function() {
 
     testCinemagraphGallery.find('button')[0].click();
 
+    testCinemagraphGallery.triggerHandler('input');
+
     expect(angular.element(testCinemagraphGallery.find('section')[0]).hasClass('thumbnail-section')).toBe(true);
     expect(testCinemagraphGallery.find('img').length).toBe(3);
     expect(angular.element(testCinemagraphGallery.find('img')[0]).prop('title')).toBe('Pierrot le fou'); expect(angular.element(testCinemagraphGallery.find('img')[1]).prop('title')).toBe('Lawless');
@@ -54,22 +56,27 @@ describe('Cinemagraph gallery with sub-components', function() {
 
     let testCinemagraphGallery = this.compile(require('./cinemagraph-gallery-test.html'))(this.scope);
     this.scope.$digest();
+
     testCinemagraphGallery.find('li')[0].click();
 
     expect(angular.element(testCinemagraphGallery.find('img')[0]).hasClass('fullsize-image')).toBe(true);
     expect(angular.element(testCinemagraphGallery.find('img')[0]).prop('alt')).toBe('Pierrot le fou');
 
-
-    testCinemagraphGallery.find('button')[0].click();
+    testCinemagraphGallery.find('button')[0].click(); // x out button
     testCinemagraphGallery.find('li')[1].click();
+
+    testCinemagraphGallery.triggerHandler('input');
 
     expect(angular.element(testCinemagraphGallery.find('img')[0]).prop('alt')).toBe('Lawless');
 
     testCinemagraphGallery.find('button')[0].click();
     testCinemagraphGallery.find('li')[2].click();
 
+    testCinemagraphGallery.triggerHandler('input');
+
     expect(angular.element(testCinemagraphGallery.find('img')[0]).prop('alt')).toBe('The Man Who Fell to Earth');
 
+    testCinemagraphGallery.find('button')[0].click();
   });
 
 });

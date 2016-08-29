@@ -1,7 +1,13 @@
 <section>
 
-  <select class="gallery-select form-control" ng-init="album=cinemagraphGalleryCtrl.albums[0]" ng-options="item as item.label for item in cinemagraphGalleryCtrl.albums" ng-model="album" ng-change="cinemagraphGalleryCtrl.chooseAlbum(album)"
-  ng-show="!cinemagraphGalleryCtrl.showFullsize"></select>
+  <select
+  class="gallery-select form-control"
+  ng-init="album=cinemagraphGalleryCtrl.albums[0]"
+  ng-options="item as item.label for item in cinemagraphGalleryCtrl.albums"
+  ng-model="album"
+  ng-change="cinemagraphGalleryCtrl.chooseAlbum(album)"
+  ng-show="!cinemagraphGalleryCtrl.showFullsize">
+  </select>
 
 
   <section class="text-section full-width-container" ng-if="cinemagraphGalleryCtrl.showList && !cinemagraphGalleryCtrl.showFullsize">
