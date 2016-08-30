@@ -17,7 +17,7 @@ module.exports = function(app) {
     let giphyId = Number.parseInt($routeParams.giphyId);
     this.giphy = giphyId;
 
-    this.galleryId = function(galleryId) {
+    this.getGalleryId = function(galleryId) {
       if (isNaN(galleryId)) return false;
       if (!isFinite(galleryId)) return false;
       if (galleryId < 0) return false;
@@ -25,7 +25,7 @@ module.exports = function(app) {
       return true;
     };
 
-    this.giphyId = function(giphyId) {
+    this.getGiphyId = function(giphyId) {
       if (isNaN(giphyId)) return false;
       if (!isFinite(giphyId)) return false;
       if (giphyId < 0) return false;
@@ -41,12 +41,12 @@ module.exports = function(app) {
       this.giphy = this.albums[galleryId - 1].giphys[giphyId - 1];
     };
 
-    this.displayList = function() {
+    this.getList = function() {
       this.list = true;
       this.thumbnail = false;
     };
 
-    this.displayThumbnail = function() {
+    this.getThumbnail = function() {
       this.thumbnail = true;
       this.list = false;
     };
