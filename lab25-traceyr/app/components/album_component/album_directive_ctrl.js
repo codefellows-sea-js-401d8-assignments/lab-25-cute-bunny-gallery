@@ -2,8 +2,8 @@
 
 module.exports = function(app) {
   app.controller('AlbumDirectiveController', function() {
-    this.showThumbnail = (thumbnail)=>{
-
-    }
+    // this.showThumbnail = (thumbnail)=>{
+    //
+    // }
   });
 };
