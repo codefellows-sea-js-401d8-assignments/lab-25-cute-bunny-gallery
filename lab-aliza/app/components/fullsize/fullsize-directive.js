@@ -8,11 +8,7 @@ module.exports = function(app) {
       controller: 'ImageController',
       controllerAs: 'fullsize',
       bindToController: true,
-      scope: {
-        title: '@',
-        description: '@',
-        url: '@'
-      }
+      scope: {}
     };
   });
 };

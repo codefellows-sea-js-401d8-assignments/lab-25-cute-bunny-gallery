@@ -41,5 +41,13 @@ module.exports = function(app) {
       this.giphy = this.albums[galleryId - 1].giphys[giphyId - 1];
     };
 
+    this.displayList = function() {
+      this.list = !this.list;
+    };
+
+    this.displayThumbnail = function() {
+      this.thumbnail = !this.thumbnail;
+    };
+
   }]);
 };

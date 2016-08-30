@@ -1,7 +1,7 @@
 <div data-ng-repeat="album in home.albums" class="col-md-12">
   <a class="list-group-item" href="#/gallery/{{album.galleryId}}">
-    <h2>{{album.title}}</h2>
-    <h3>{{album.description}}</h3>
+    <h1>{{album.title}}</h2>
+    <h2>{{album.description}}</h3>
     <img ng-src="{{album.giphys[0].url}}" width="200" />
   </a>
 </div>

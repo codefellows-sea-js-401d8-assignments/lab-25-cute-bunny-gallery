@@ -1,16 +1,16 @@
-<div>
-  <h1>{{gallery.album.title}}</h1>
-  <p>{{gallery.album.description}}</p>
-  <a ng-init="gallery.list=false" data-ng-click="list=true" class="btn btn-default"> List View</a>
-  <a ng-init="gallery.thumbnail=false" class="btn btn-default" data-ng-click="thumbnail=true"> Thumbnail View</a>
-  <div data-ng-repeat="album in gallery.albums" class="col-md-12">
-    <a ng-hide="list=true" ng-show="gallery.thumbnail=true" href="#/gallery/{{album.galleryId}}/fullsize/{{giphy.giphyId}}">
-      <h2>{{album.giphy.title}}</h2>
-      <p>{{album.giphy.description}}</p>
+<div data-ng-init="gallery.getGallery()">
+  <h1>{{gallery.gallery.title}}</h1>
+  <h2>{{gallery.gallery.description}}</h2>
+  <a class="btn btn-default" ng-click="gallery.displayList()">List</a>
+  <a class="btn btn-default" ng-click="gallery.displayThumbnail()">Thumbnail</a>
+  <div class="col-md-12" ng-repeat="giphy in gallery.gallery.giphys">
+    <a href="#/gallery/{{gallery.gallery.galleryId}}/fullsize/{{giphy.giphyId}}" ng-show="gallery.list">
+      <h3>{{giphy.title}}</h3>
+      <p>{{giphy.description}}</p>
     </a>
-    <a ng-hide="list=true" ng-show="thumbnail=true" href="#/gallery/{{album.galleryId}}/fullsize/{{giphy.giphyId}}">
-      <img ng-repeat="giphy in giphy.url" ng-src="{{giphy.url}}" width="100">
+    <a href="#/gallery/{{gallery.gallery.galleryId}}/fullsize/{{giphy.giphyId}}">
+      <img ng-src="{{giphy.url}}" width="100" ng-show="gallery.thumbnail">
     </a>
   </div>
-  <a href="#/" class="btn btn-default">Back to Gallery List</a>
+  <a href="#/" class="btn btn-default">Gallery List</a>
 </div>

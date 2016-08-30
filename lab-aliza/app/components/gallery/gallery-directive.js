@@ -8,12 +8,7 @@ module.exports = function(app){
       controller: 'ImageController',
       controllerAs: 'gallery',
       bindToController: true,
-      scope: {
-        id: '@',
-        title: '@',
-        url: '@',
-        description: '@'
-      }
+      scope: {}
     };
   });
 };
