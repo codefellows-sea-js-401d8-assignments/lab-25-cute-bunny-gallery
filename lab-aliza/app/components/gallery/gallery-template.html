@@ -1,8 +1,8 @@
 <div data-ng-init="gallery.getGallery()">
   <h1>{{gallery.gallery.title}}</h1>
   <h2>{{gallery.gallery.description}}</h2>
-  <a class="btn btn-default" ng-click="gallery.displayList()">List</a>
-  <a class="btn btn-default" ng-click="gallery.displayThumbnail()">Thumbnail</a>
+  <a class="btn btn-default" ng-click="gallery.getList()">List</a>
+  <a class="btn btn-default" ng-click="gallery.getThumbnail()">Thumbnail</a>
   <div class="col-md-12" ng-repeat="giphy in gallery.gallery.giphys">
     <a href="#/gallery/{{gallery.gallery.galleryId}}/fullsize/{{giphy.giphyId}}" ng-show="gallery.list">
       <h3>{{giphy.title}}</h3>
