@@ -1,15 +1,24 @@
 <div class="container">
   <div class="row">
     <div class="list-group col-md-6  col-md-offset-3">
-      <a href="#/" class="homeView" album="ctrl.album">{{ctrl.title}}</a>
-      <div>
-        <ul>
-          <li ng-repeat="img in ctrl.album.images">
-            <div thumbnail-directive images="{{img}}">hello</div>
-          </li>
-        </ul>
+      <a href="#/" class="homeView" album="ctrl.album" ng-click="showAlbumInfo = !showAlbumInfo">{{ctrl.title}}</a>
+      <div ng-show="showAlbumInfo">
+        <div ng-show="showOne">
+          <ul>
+            <li ng-repeat="img in ctrl.album.images">
+              <div thumbnail-directive images="{{img}}"></div>
+            </li>
+          </ul>
+        </div>
+        <div ng-show="!showOne">
+          <ul>
+            <li ng-repeat="url in ctrl.album.images">
+              <div text-directive images="{{url}}"></div>
+            </li>
+          </ul>
+        </div>
+        <button type="button" ng-click="showOne = !showOne">Toggle</button>
       </div>
-      <button name="button">See Text</button>
     </div>
   </div>
 </div>

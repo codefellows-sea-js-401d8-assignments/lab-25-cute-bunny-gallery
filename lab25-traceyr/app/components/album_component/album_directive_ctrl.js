@@ -2,8 +2,7 @@
 
 module.exports = function(app) {
   app.controller('AlbumDirectiveController', function() {
-    // this.showThumbnail = (thumbnail)=>{
-    //
-    // }
+    this.showOne = true;
+    this.showAlbumInfo = false;
   });
 };
