@@ -1,12 +1,7 @@
-<div class="list-group col-md-6  col-md-offset-3">
-  <ul>
-    <li ng-repeat="img in hd.images">
-      <a href="#/" class="list-group-item">
-        <i class="fa fa-picture-o"></i>
-        <strong>{{hd.title}}</strong> <br />
-      Description: {{hd.description}} <br />
-      </a>
-      <a href="{{hd.url}}" class="list-group-item"><i class="fa fa-link"></i> Image Source</a>
-    </li>
-  </ul>
+<div data-ng-repeat="album in home.albums" class="col-md-12">
+  <a class="list-group-item" href="#/gallery/{{album.galleryId}}">
+    <h2>{{album.title}}</h2>
+    <h3>{{album.description}}</h3>
+    <img ng-src="{{album.giphys[0].url}}" width="200" />
+  </a>
 </div>

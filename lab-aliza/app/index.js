@@ -15,18 +15,18 @@ app.config(['$routeProvider', function($route) {
   $route
     .when('/', {
       template: require('./html/home.html'),
-      controller: 'ImageController',
-      controllerAs: 'hd'
+      controller: 'HomeController',
+      controllerAs: 'home'
     })
-    .when('/thumbnail', {
-      template: require('./html/thumbnail.html'),
+    .when('/gallery/:galleryId', {
+      template: require('./html/gallery.html'),
       controller: 'ImageController',
-      controllerAs: 'tnd'
+      controllerAs: 'album'
     })
-    .when('/fullsize/:id', {
+    .when('/gallery/:galleryId/fullsize/:fullId', {
       template: require('./html/fullsize.html'),
       controller: 'ImageController',
-      controllerAs: 'fsd'
+      controllerAs: 'album'
     })
     .otherwise({
       redirectTo: '/'

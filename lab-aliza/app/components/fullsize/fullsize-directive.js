@@ -6,7 +6,7 @@ module.exports = function(app) {
       restrict: 'EAC',
       template: require('./fullsize-template.html'),
       controller: 'ImageController',
-      controllerAs: 'fsd',
+      controllerAs: 'fullsize',
       bindToController: true,
       scope: {
         title: '@',

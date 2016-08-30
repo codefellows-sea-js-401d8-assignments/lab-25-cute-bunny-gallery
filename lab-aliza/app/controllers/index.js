@@ -1,5 +1,6 @@
 'use strict';
 
 module.exports = function(app) {
-  require('./images-ctrl')(app);
+  require('./home-ctrl.js')(app);
+  require('./images-ctrl.js')(app);
 };

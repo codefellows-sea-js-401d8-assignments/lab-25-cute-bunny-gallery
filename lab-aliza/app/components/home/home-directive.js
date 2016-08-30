@@ -1,15 +1,18 @@
 'use strict';
 
-module.exports = function(app) {
+module.exports = function(app){
   app.directive('apHomeDirective', function() {
     return {
       restrict: 'EAC',
       template: require('./home-template.html'),
-      controller: 'ImageController',
-      controllerAs: 'hd',
+      controller: 'HomeController',
+      controllerAs: 'home',
       bindToController: true,
       scope: {
-        label: '@'
+        title: '@',
+        description: '@',
+        id: '@',
+        url: '@'
       }
     };
   });

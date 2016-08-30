@@ -1,30 +1,45 @@
 'use strict';
 
 module.exports = function(app) {
-  app.controller('ImageController', ['$routeParams', '$location', function($routeParams) {
+  app.controller('ImageController', ['$location', '$routeParams', function($location, $routeParams) {
 
     let kittens = require('../../data/album-1');
     let bunnies = require('../../data/album-2');
     let puppies = require('../../data/album-3');
 
-    this.images = [kittens, bunnies, puppies];
+    this.albums = [kittens, bunnies, puppies];
 
-    // this.isValidId = function(id){
-    //   if (isNaN(id)) return false;
-    //   if (!isFinite(id)) return false;
-    //   if (id < 1) return false;
-    //   if (typeof(this.images[id - 1]) === 'undefined') return false;
-    //   return true;
-    // };
+    this.list = false;
+    this.thumbnail = false;
 
-    let id = Number.parseInt($routeParams.id);
+    let galleryId = Number.parseInt($routeParams.galleryId);
+    this.gallery = galleryId;
+    let giphyId = Number.parseInt($routeParams.giphyId);
+    this.giphy = giphyId;
 
-    // if (!this.isValidId(id)){
-    //   $location.path('/');
-    // }
+    this.galleryId = function(galleryId) {
+      if (isNaN(galleryId)) return false;
+      if (!isFinite(galleryId)) return false;
+      if (galleryId < 0) return false;
+      if (typeof(this.albums[galleryId - 1]) === 'undefined') return false;
+      return true;
+    };
 
-    this.kitten = this.images[0].giphys[id - 1];
-    this.bunny = this.images[1].giphys[id - 1];
-    this.puppy = this.images[2].giphys[id - 1];
+    this.giphyId = function(giphyId) {
+      if (isNaN(giphyId)) return false;
+      if (!isFinite(giphyId)) return false;
+      if (giphyId < 0) return false;
+      if (typeof(this.albums[this.getGallery].giphys[giphyId - 1]) === 'undefined') return false;
+      return true;
+    };
+
+    this.getGallery = function() {
+      this.gallery = this.albums[galleryId - 1];
+    };
+
+    this.getGiphy = function(giphyId) {
+      this.giphy = this.albums[this.galleryId].giphys[giphyId - 1];
+    };
+
   }]);
 };

@@ -2,6 +2,6 @@
 
 module.exports = function(app){
   require('./fullsize')(app);
-  require('./thumbnail')(app);
+  require('./gallery')(app);
   require('./home')(app);
 };
