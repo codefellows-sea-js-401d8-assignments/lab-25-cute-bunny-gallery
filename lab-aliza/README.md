@@ -1,4 +1,4 @@
-# Aliza Lab 25
+# Aliza Lab 26
 
 1. `git clone https://github.com/aliza89p/lab-25-cute-bunny-gallery.git`  
 2. `cd` into `lab-25-cute-bunny-gallery`  
