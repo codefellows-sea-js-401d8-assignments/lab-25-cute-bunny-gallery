@@ -9,4 +9,4 @@
 7. Start application: `npm start`
 8. In browser, open `localhost:8080` and use app  
 9. Lint: `npm run lint`  
-9. Test: `npm run lint`  
+9. Test: `npm test`  
