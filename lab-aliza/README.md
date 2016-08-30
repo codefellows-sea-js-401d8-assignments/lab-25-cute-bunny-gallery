@@ -6,6 +6,6 @@
 4. `git checkout lab-25`  
 5. `cd lab-aliza`  
 6. `webpack`  
-7. Start application: `npm run watch` OR `nodemon server.js`
+7. Start application: `npm start`
 8. In browser, open `localhost:8080` and use app  
 9. Lint: `npm run lint`  
