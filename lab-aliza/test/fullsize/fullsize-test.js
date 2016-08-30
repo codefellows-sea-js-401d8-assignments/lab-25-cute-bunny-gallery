@@ -1,7 +1,7 @@
 'use strict';
 
 const angular = require('angular');
-let testApp = angular.module('testApp', []);
+let testApp = angular.module('testApp', [require('angular-route')]);
 require('../../app/components/fullsize')(testApp);
 
 describe('gallery component', function() {
