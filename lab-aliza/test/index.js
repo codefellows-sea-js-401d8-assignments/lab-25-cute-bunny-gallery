@@ -3,4 +3,6 @@
 require('angular');
 require('angular-mocks');
 
-require('./gallery-test');
+require('./gallery/gallery-test.js');
+require('./fullsize/fullsize-test.js');
+require('./home/home-test.js');
