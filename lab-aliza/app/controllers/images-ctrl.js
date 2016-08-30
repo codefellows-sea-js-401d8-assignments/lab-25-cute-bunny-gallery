@@ -29,7 +29,7 @@ module.exports = function(app) {
       if (isNaN(giphyId)) return false;
       if (!isFinite(giphyId)) return false;
       if (giphyId < 0) return false;
-      if (typeof(this.albums[this.getGallery].giphys[giphyId - 1]) === 'undefined') return false;
+      if (typeof(this.albums[galleryId - 1].giphys[giphyId - 1]) === 'undefined') return false;
       return true;
     };
 
@@ -37,8 +37,8 @@ module.exports = function(app) {
       this.gallery = this.albums[galleryId - 1];
     };
 
-    this.getGiphy = function(giphyId) {
-      this.giphy = this.albums[this.galleryId].giphys[giphyId - 1];
+    this.getGiphy = function() {
+      this.giphy = this.albums[galleryId - 1].giphys[giphyId - 1];
     };
 
   }]);

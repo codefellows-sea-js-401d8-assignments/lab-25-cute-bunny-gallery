@@ -23,7 +23,7 @@ app.config(['$routeProvider', function($route) {
       controller: 'ImageController',
       controllerAs: 'album'
     })
-    .when('/gallery/:galleryId/fullsize/:fullId', {
+    .when('/gallery/:galleryId/fullsize/:giphyId', {
       template: require('./html/fullsize.html'),
       controller: 'ImageController',
       controllerAs: 'album'
