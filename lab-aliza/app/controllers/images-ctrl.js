@@ -42,11 +42,13 @@ module.exports = function(app) {
     };
 
     this.displayList = function() {
-      this.list = !this.list;
+      this.list = true;
+      this.thumbnail = false;
     };
 
     this.displayThumbnail = function() {
-      this.thumbnail = !this.thumbnail;
+      this.thumbnail = true;
+      this.list = false;
     };
 
   }]);
