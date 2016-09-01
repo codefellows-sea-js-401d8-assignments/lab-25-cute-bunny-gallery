@@ -13,7 +13,6 @@ describe('gallery component', function() {
   }));
 
   it('should list albums', function() {
-    this.scope.contents = this.albums;
     let home = this.compile(require('./home-test.html'))(this.scope);
     this.scope.$digest();
     expect(home.find('h1').text()).toContain('Kittens');

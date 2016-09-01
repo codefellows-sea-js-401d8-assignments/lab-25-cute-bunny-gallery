@@ -3,6 +3,6 @@
 require('angular');
 require('angular-mocks');
 
-require('./gallery/gallery-test.js');
-require('./fullsize/fullsize-test.js');
-require('./home/home-test.js');
+require('./gallery-test/gallery-test.js');
+require('./fullsize-test/fullsize-test.js');
+require('./home-test/home-test.js');
