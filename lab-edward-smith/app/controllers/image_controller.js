@@ -9,15 +9,13 @@ module.exports = function(app) {
     this.list = false;
 
     this.getAlbum = function() {
-      this.album = this.images[location]
-      console.log(this.album)
-    }
+      this.album = this.images[location];
+    };
 
 
     this.getImage = function() {
-      this.image = this.images[location].images[$rp.imageId-1]
-      console.log(this.image)
-    }
+      this.image = this.images[location].images[$rp.imageId-1];
+    };
 
     this.toggle = function() {
       if (this.list) {

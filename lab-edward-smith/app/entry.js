@@ -7,7 +7,7 @@ const angular = require('angular');
 const galleryApp = angular.module('galleryApp', [require('angular-route')]);
 
 galleryApp.run(['$rootScope', function($rootScope){
-  $rootScope.images = [require('./data/bunnies'), require('./data/boxers'), require('./data/terriers')]
+  $rootScope.images = [require('./data/bunnies'), require('./data/boxers'), require('./data/terriers')];
 }]);
 
 require('./controllers')(galleryApp);
