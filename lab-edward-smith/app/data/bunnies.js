@@ -1,4 +1,5 @@
 module.exports = {
+  id: 0,
   title: 'bunnies',
   description: 'bunnies only',
   images: [{

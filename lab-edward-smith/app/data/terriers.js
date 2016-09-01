@@ -1,11 +1,12 @@
 'use strict';
 
 module.exports = {
+  id: 2,
   title: 'terriers',
   description: 'A bunch of terriers',
   images: [{
     id: 1,
-    url: 'https://upload.wikimedia.org/wikipedia/commons/1/17/Westie_pups.jpg',
+    url: 'http://www.thecastleinn-lulworthcove.co.uk/images/dogs/0158_megan_and_connie_in_the_beer_garden.jpg',
     description: 'Twin terriers'
   }, {
     id: 2,

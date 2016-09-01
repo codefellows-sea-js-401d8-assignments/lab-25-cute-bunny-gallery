@@ -1,18 +1,21 @@
 'use strict';
 
+// npm modules
 const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
 const CleanPlugin = require('clean-webpack-plugin');
 const ExtractText = require('extract-text-webpack-plugin');
 
+// module constants
 const production = process.env.NODE_ENV === 'production';
 const apiURL = process.env.API_URL || 'http://localhost:3000';
 
-let plugins = [
+// webpack config
+var plugins = [
   new ExtractText('bundle.css'),
   new webpack.DefinePlugin({
-    __API_URL__: JSON.stringify(apiURL),
-  }),
+    __API_URL__: JSON.stringify(apiURL)
+  })
 ];
 
 if (production){
@@ -20,49 +23,49 @@ if (production){
     new webpack.optimize.UglifyJsPlugin({
       mangle: true,
       compress: {
-        warnings: false,
-      },
+        warnings: false
+      }
     }),
-    new CleanPlugin(),
+    new CleanPlugin()
   ]);
 }
 
-module.exports = exports = {
+module.exports = {
   entry: `${__dirname}/app/entry.js`,
   debug: !production,
   devtool: production ? false : 'eval',
   plugins: plugins,
   output: {
     path: 'build',
-    filename: 'bundle.js',
+    filename: 'bundle.js'
   },
   sassLoader: {
-    includePaths: [`${__dirname}/app/scss.lib`],
+    includePaths: [`${__dirname}/app/scss/lib`]
   },
-  postcss: function() {
+  postcss: function(){
     return [autoprefixer];
   },
-  module: {
+  module:{
     loaders: [
       {
         test: /\.scss$/,
-        loader: ExtractText.extract('style', 'css!postcss!sass!'),
+        loader: ExtractText.extract('style', 'css!postcss!sass!')
       },
       {
         test: /\.js$/,
         loader: 'babel',
         exclude: /node_modules/,
         query: {
-          presets: ['es2015'],
-        },
+          presets: ['es2015']
+        }
       },
       {
         test: /\.html$/,
-        loader: 'html',
+        loader: 'html'
       },
       {
         test: /\.(jpg|gif|png)$/,
-        loader: 'file?name=img/[hash].[ext]',
+        loader: 'file?name=img/[hash].[ext]'
       },
       {
         test: /\.svg.*/,
@@ -70,7 +73,7 @@ module.exports = exports = {
       },
       {
         test: /\.woff.*/,
-        loader: 'file?name=fonts/[name].[ext]',
+        loader: 'file?name=fonts/[name].[ext]'
       },
       {
         test: /\.[ot]tf.*/,
@@ -80,6 +83,6 @@ module.exports = exports = {
         test: /\.eot.*/,
         loader: 'url?limit=10000&mimetype=application/vnd.ms-fontobject&name=fonts/[name].[ext]'
       }
-    ],
-  },
+    ]
+  }
 };

@@ -7,9 +7,7 @@ const angular = require('angular');
 const galleryApp = angular.module('galleryApp', [require('angular-route')]);
 
 galleryApp.run(['$rootScope', function($rootScope){
-  $rootScope.bunnies = require('./data/bunnies');
-  $rootScope.boxers = require('./data/boxers');
-  $rootScope.terriers = require('./data/terriers');
+  $rootScope.images = [require('./data/bunnies'), require('./data/boxers'), require('./data/terriers')]
 }]);
 
 require('./controllers')(galleryApp);
@@ -21,5 +19,13 @@ galleryApp.config(['$routeProvider', function($route){
       template: require('./html/home.html'),
       controller: 'ImageController',
       controllerAs: 'ic'
+    })
+    .when('/:id', {
+      template: require('./html/album.html'),
+      controller: 'ImageController'
+    })
+    .when('/:id/:imageId', {
+      template: require('./html/full.html'),
+      controller: 'ImageController'
     });
 }]);

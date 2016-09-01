@@ -1,11 +1,12 @@
 'use strict';
 
 module.exports = {
+  id: 1,
   title: 'boxers',
   description: 'the best dogs in the wuuurld',
   images: [{
     id: 1,
-    url: 'http://animalia-life.com/data_images/boxer/boxer7.jpg',
+    url: 'http://www.kentuckianaboxer.com/images/Boxer1.jpg',
     description: 'Sad boxer'
   }, {
     id: 2,
