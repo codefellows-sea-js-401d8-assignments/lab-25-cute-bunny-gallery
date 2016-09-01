@@ -8,12 +8,7 @@ module.exports = function(app){
       controller: 'HomeController',
       controllerAs: 'home',
       bindToController: true,
-      scope: {
-        title: '@',
-        description: '@',
-        id: '@',
-        url: '@'
-      }
+      scope: {}
     };
   });
 };

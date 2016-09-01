@@ -9,14 +9,12 @@ describe('gallery component', function() {
   beforeEach(angular.mock.inject(function($rootScope, $compile) {
     this.compile = $compile;
     this.scope = $rootScope.$new();
-    let kittens = require('../../data/album-1');
-    let bunnies = require('../../data/album-2');
-    let puppies = require('../../data/album-3');
-
-    this.albums = [kittens, bunnies, puppies];
   }));
 
   it('should have three albums', function() {
-    expect(this.albums.length).toBe(3);
+    this.scope.contents = this.albums;
+    let fullsize = this.compile(require('./fullsize-test.html'))(this.scope);
+    this.scope.$digest();
+
   });
 });
