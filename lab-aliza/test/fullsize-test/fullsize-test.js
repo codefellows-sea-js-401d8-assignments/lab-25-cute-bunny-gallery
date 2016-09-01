@@ -1,7 +1,7 @@
 'use strict';
 
 const angular = require('angular');
-let testApp = angular.module('testApp',[require('angular-route')]);
+let testApp = angular.module('testApp');
 
 require('../../app/components/fullsize')(testApp);
 

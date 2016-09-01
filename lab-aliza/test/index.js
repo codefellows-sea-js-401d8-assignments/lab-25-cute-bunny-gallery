@@ -1,6 +1,6 @@
 'use strict';
 
-require('angular');
+require('angular').module('testApp', [require('angular-route')]);
 require('angular-mocks');
 
 require('./gallery-test/gallery-test.js');
