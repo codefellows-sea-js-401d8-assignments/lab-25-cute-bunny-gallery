@@ -1,23 +1,32 @@
 <div class="container">
   <div class="row">
     <div class="list-group col-md-6  col-md-offset-3">
-      <a href="#/" class="homeView" album="ctrl.album" ng-click="showAlbumInfo = !showAlbumInfo">{{ctrl.title}}</a>
-      <div ng-show="showAlbumInfo">
-        <div ng-show="showOne">
-          <ul>
-            <li ng-repeat="img in ctrl.album.images">
-              <div thumbnail-directive images="{{img}}"></div>
-            </li>
-          </ul>
+      <div ng-show="!showAll">
+        <button type="submit" class="homeView" album="ctrl.album" ng-click="showAlbumInfo = !showAlbumInfo">{{ctrl.title}}</button>
+        <div ng-show="showAlbumInfo">
+          <div ng-show="showOne">
+            <ul>
+              <li ng-repeat="img in ctrl.album.images">
+                <div thumbnail-directive images="{{img}}"></div>
+              </li>
+            </ul>
+          </div>
+          <div ng-show="!showOne">
+            <ul>
+              <li ng-repeat="url in ctrl.album.images">
+                <div text-directive images="{{url}}"></div>
+              </li>
+            </ul>
+          </div>
+          <button type="button" ng-click="showOne = !showOne">Toggle</button>
         </div>
-        <div ng-show="!showOne">
-          <ul>
-            <li ng-repeat="url in ctrl.album.images">
-              <div text-directive images="{{url}}"></div>
-            </li>
-          </ul>
-        </div>
-        <button type="button" ng-click="showOne = !showOne">Toggle</button>
+      </div>
+      <div ng-show="showAll">
+        <ul>
+          <li ng-repeat="image in ctrl.album.images">
+            <div fullsize_directive images="{{image}}"></div>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
