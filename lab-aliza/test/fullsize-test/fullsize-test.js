@@ -17,9 +17,8 @@ describe('fullsize component', function() {
   it('should display fullsize info', function() {
     let fullsize = this.compile(require('./fullsize-test.html'))(this.scope);
     this.scope.$digest();
-    let ctrl = fullsize.isolateScope().ctrl;
-    expect(ctrl.getGalleryId()).toBe(1);
-    expect(ctrl.getGiphyId()).toBe(1);
-    expect(fullsize.find('h1').text()).toBe('');
+    expect(fullsize.find('h1').text()).toBe('Falling asleep');
+    expect(fullsize.find('h2').text()).toBe('Description: So sleepy.');
+    expect(fullsize.find('img').attr('src')).toBe('https://media.giphy.com/media/emWySpOLFLUAM/giphy.gif');
   });
 });

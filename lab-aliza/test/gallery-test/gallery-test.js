@@ -10,14 +10,16 @@ describe('gallery component', function() {
   beforeEach(angular.mock.inject(function($compile, $rootScope, $routeParams) {
     this.compile = $compile;
     this.scope = $rootScope.$new();
-    $routeParams.galleryId = 1;
+    $routeParams.galleryId = 2;
   }));
 
   it('should display gallery', function() {
     let gallery = this.compile(require('./gallery-test.html'))(this.scope);
     this.scope.$digest();
-    let ctrl = gallery.isolateScope().ctrl;
-    expect(ctrl.getGalleryId()).toBe(1);
-    expect(gallery.find('h1').text()).toBe('');
+    expect(gallery.find('h1').text()).toBe('Bunnies');
+    expect(gallery.find('h2').text()).toBe('Cute bunny giphys');
+    expect(gallery.find('img').attr('src')).toBe('https://media.giphy.com/media/xT4uQDxVreP0zx5O92/giphy.gif');
+    expect(gallery.find('p').text()).toContain('Sniff sniff.');
+    expect(gallery.find('h3').text()).toContain('I smell you');
   });
 });
