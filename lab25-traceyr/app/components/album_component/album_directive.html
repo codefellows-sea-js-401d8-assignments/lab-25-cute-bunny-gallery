@@ -6,14 +6,14 @@
         <div ng-show="showAlbumInfo">
           <div ng-show="showOne">
             <ul>
-              <li ng-repeat="img in ctrl.album.images">
+              <li class="list-group-item" ng-repeat="img in ctrl.album.images">
                 <div thumbnail-directive images="{{img}}"></div>
               </li>
             </ul>
           </div>
           <div ng-show="!showOne">
-            <ul>
-              <li ng-repeat="url in ctrl.album.images">
+            <ul class="list-group">
+              <li class="list-group-item" ng-repeat="url in ctrl.album.images">
                 <div text-directive images="{{url}}"></div>
               </li>
             </ul>
@@ -22,8 +22,8 @@
         </div>
       </div>
       <div ng-show="showAll">
-        <ul>
-          <li ng-repeat="image in ctrl.album.images">
+        <ul class="list-group">
+          <li class="list-group-item" ng-repeat="image in ctrl.album.images">
             <div fullsize_directive images="{{image}}"></div>
           </li>
         </ul>
