@@ -5,8 +5,5 @@ module.exports = function(app) {
     this.showOne = true;
     this.showAlbumInfo = false;
     this.showAll = true;
-    this.showOneImage = function(img){
-      this.showAll = false;
-    }
   });
 };
