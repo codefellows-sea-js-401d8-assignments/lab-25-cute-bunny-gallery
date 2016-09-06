@@ -40,5 +40,8 @@
     "url-loader": "^0.5.7",
     "webpack": "^1.13.2",
     "webpack-dev-server": "^1.15.0"
+  },
+  "devDependencies": {
+    "clean-webpack-plugin": "^0.1.10"
   }
 }
