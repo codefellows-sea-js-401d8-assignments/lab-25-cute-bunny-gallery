@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = function(app){
-  app.directive('apGalleryDirective', function() {
+  app.directive('galleryDirective', function() {
     return {
       restrict: 'EAC',
       template: require('./gallery-template.html'),
