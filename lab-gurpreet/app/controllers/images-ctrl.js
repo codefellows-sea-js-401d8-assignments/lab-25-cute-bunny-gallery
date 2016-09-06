@@ -14,8 +14,8 @@ module.exports = function(app) {
 
     let galleryId = Number.parseInt($routeParams.galleryId);
     this.gallery = galleryId;
-    let imageId = Number.parseInt($routeParams.imageId);
-    this.image = imageId;
+    let picId = Number.parseInt($routeParams.picId);
+    this.pic = picId;
 
     this.getGalleryId = function(galleryId) {
       if (isNaN(galleryId)) return false;
@@ -25,11 +25,11 @@ module.exports = function(app) {
       return true;
     };
 
-    this.getimageId = function(imageId) {
-      if (isNaN(imageId)) return false;
-      if (!isFinite(imageId)) return false;
-      if (imageId < 0) return false;
-      if (typeof(this.albums[galleryId - 1].images[imageId - 1]) === 'undefined') return false;
+    this.getPicId = function(picId) {
+      if (isNaN(picId)) return false;
+      if (!isFinite(picId)) return false;
+      if (picId < 0) return false;
+      if (typeof(this.albums[galleryId - 1].pics[picId - 1]) === 'undefined') return false;
       return true;
     };
 
@@ -37,8 +37,8 @@ module.exports = function(app) {
       this.gallery = this.albums[galleryId - 1];
     };
 
-    this.getimage = function() {
-      this.image = this.albums[galleryId - 1].images[imageId - 1];
+    this.getPic = function() {
+      this.pic = this.albums[galleryId - 1].pics[picId - 1];
     };
 
     this.getList = function() {

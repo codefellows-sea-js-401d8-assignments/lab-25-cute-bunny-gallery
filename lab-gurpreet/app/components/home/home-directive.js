@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = function(app){
-  app.directive('apHomeDirective', function() {
+  app.directive('homeDirective', function() {
     return {
       restrict: 'EAC',
       template: require('./home-template.html'),

@@ -1,7 +1,7 @@
-<div data-ng-init="fullsize.getImage()">
-  <h1>{{fullsize.title}}</h1>
-  <h2>Description: {{fullsize.description}}</h2>
+<div data-ng-init="fullsize.getPic()">
+  <h1>{{fullsize.pic.title}}</h1>
+  <h2>Description: {{fullsize.pic.description}}</h2>
   <div class="list-group col-md-6  col-md-offset-3">
-    <img ng-src="{{fullsize.url}}" width="400" />
+    <img ng-src="{{fullsize.pic.url}}" width="400" />
   </div>
 </div>
