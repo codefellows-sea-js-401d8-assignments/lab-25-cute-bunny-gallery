@@ -11,4 +11,4 @@ in browser click and play with galleries.
 
 In the terminal
 Lint: npm run lint
-npm test
+karma start

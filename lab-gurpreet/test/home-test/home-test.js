@@ -21,8 +21,8 @@ describe('home component', function() {
     expect(home.find('h2').text()).toContain('Cute kitten pics');
     expect(home.find('h2').text()).toContain('Cute puppy pics');
     expect(home.find('h2').text()).toContain('Cute bunny pics');
-    expect(home.find('img').attr('src')).toBe('https://s-media-cache-ak0.pinimg.com/564x/18/1b/f3/181bf3cd12c1a8b316da51ca3c39a0f6.jpg');
-    expect(home.find('img').attr('src')).toBe('https://s-media-cache-ak0.pinimg.com/564x/14/6d/92/146d92eeb7a88aa951eee1a664daff77.jpg');
-    expect(home.find('img').attr('src')).toBe('https://pbs.twimg.com/profile_images/497043545505947648/ESngUXG0_400x400.jpeg');
+    expect(angular.element(home.find('img')[0]).attr('src')).toBe('https://s-media-cache-ak0.pinimg.com/564x/18/1b/f3/181bf3cd12c1a8b316da51ca3c39a0f6.jpg');
+    expect(angular.element(home.find('img')[1]).attr('src')).toBe('https://s-media-cache-ak0.pinimg.com/564x/14/6d/92/146d92eeb7a88aa951eee1a664daff77.jpg');
+    expect(angular.element(home.find('img')[2]).attr('src')).toBe('https://pbs.twimg.com/profile_images/497043545505947648/ESngUXG0_400x400.jpeg');
   });
 });
